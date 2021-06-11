@@ -17,11 +17,9 @@ class CreateBarangsTable extends Migration
             $table->engine = 'InnoDB';
             $table->collation = 'utf8mb4_unicode_ci';
 
-            $table->integer('id');
+            $table->increments('id');
             $table->string('nama_barang');
-            $table->integer('jumlah');
-
-            $table->primary('id');
+            $table->integer('jumlah_barang');
         });
     }
 
