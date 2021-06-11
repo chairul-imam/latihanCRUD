@@ -40,7 +40,7 @@
                                 <tr>
                                     <td>{{$barang->id}}</td>
                                     <td>{{ $barang->nama_barang }}</td>
-                                    <td>{{ $barang->jumlah }}</td>
+                                    <td>{{ $barang->jumlah_barang }}</td>
                                     <td> <a data-id_edit="{{ $barang->id }"> edit<a> | <a data-id_hapus="{{ $barang->id }"> hapus <a> </td>
                                 </tr>
                                 @endforeach
