@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/barang', [BarangController::class, 'index']);
+Route::post('/store', [BarangController::class, 'store']);
