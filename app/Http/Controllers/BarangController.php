@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Barang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class BarangController extends Controller
 {
@@ -14,7 +15,8 @@ class BarangController extends Controller
      */
     public function index()
     {
-        //
+        $barangs = Barang::all();
+        return View::make('barang', ['barangs' => $barangs]);
     }
 
     /**
