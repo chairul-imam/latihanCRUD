@@ -1,6 +1,7 @@
 # Catatan Pembelajaran
 
-## Migration
+## Hari 1
+### Migration
 
 Command [migration](https://laravel.com/docs/8.x/migrations#creating-tables) berfungsi untuk membuat skema tabel yang akan digunakan pada aplikasi.
 
@@ -9,7 +10,8 @@ Command [migration](https://laravel.com/docs/8.x/migrations#creating-tables) ber
 - [Tipe column yang tersedia](https://laravel.com/docs/8.x/migrations#available-column-types)
 - [Rancang Database-mu dengan Migration Pada Laravel](https://medium.com/easyread/rancang-database-mu-dengan-migration-pada-laravel-28d419d0089e)
 
-## Model & Controller
+## Hari 2
+### Model & Controller
 
 Ternyata ada cara yang lebih efisien lagi untuk men-generate file-file yang dibutuhkan.
 File dimaksud adalah migration, controller, model dll.
@@ -43,3 +45,28 @@ php artisan make:model Barang -cr
 **Referensi model & controller:**
 - [Cara membuat model](https://laravel.com/docs/8.x/eloquent#generating-model-classes)
 - [Resource Controllers](https://laravel.com/docs/8.x/controllers#resource-controllers)
+
+## Hari 3
+### Menghubungkan route, controller dan view
+
+> Faith is taking the first step even when you don't see the whole staircase. 
+> 
+> Martin Luther King, Jr
+
+Belajar menghubungkan route, controller, model dan view lumayan menarik.
+Cara saya, membuat **route** dulu, kemudian **controller** dan **view**.
+
+**Contoh**
+```php
+// jika diakses /barang, kelola dengan index() pada BarangController
+Route::get('/barang', [BarangController::class, 'index']);
+```
+
+kemudian pada index() akan diakses semua record barang menggunakan Barang::all(). 
+
+Method all() ekuivalen dengan query SQL
+```sql
+SELECT * FROM barangs;
+```
+
+setelah disimpan ke $barangs, variable $barang akan dipass ke view 'barang.blade.php' sebagai 'barangs'.
