@@ -37,7 +37,12 @@ class BarangController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $barang = new Barang;
+        $barang->nama_barang = $request->nama_barang;
+        $barang->jumlah_barang = $request->jumlah_barang;
+        $barang->save();
+
+        return redirect('/barang');
     }
 
     /**
