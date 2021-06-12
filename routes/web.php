@@ -20,5 +20,6 @@ Route::get('/', function () {
 
 Route::get('/barang', [BarangController::class, 'index'])
     ->name('barang.index');
-Route::post('/barang/store', [BarangController::class, 'store'])
+Route::post('/barang/tambah', [BarangController::class, 'store'])
     ->name('barang.tambah');
+Route::get('/barang/edit/{barang}', [BarangController::class, 'edit']);
