@@ -23,3 +23,4 @@ Route::get('/barang', [BarangController::class, 'index'])
 Route::post('/barang/tambah', [BarangController::class, 'store'])
     ->name('barang.tambah');
 Route::get('/barang/edit/{barang}', [BarangController::class, 'edit']);
+Route::post('barang/update/{barang}', [BarangController::class, 'update']);
