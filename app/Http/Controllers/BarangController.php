@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Barang;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Redirect;
 
 class BarangController extends Controller
 {
@@ -42,7 +43,7 @@ class BarangController extends Controller
         $barang->jumlah_barang = $request->jumlah_barang;
         $barang->save();
 
-        return redirect('/barang');
+        return Redirect::route('barang.index');
     }
 
     /**
