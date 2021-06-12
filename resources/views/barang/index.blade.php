@@ -46,6 +46,10 @@
                                             edit
                                         <a>
                                         |
+                                        <a data-id_hapus="{{ $barang->id }}" href="/barang/hapus/{{ $barang->id }}">
+                                            hapus
+                                        <a>
+                                    </td>
                                 </tr>
                                 @endforeach
                             </tbody>
