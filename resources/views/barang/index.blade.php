@@ -13,7 +13,7 @@
                 <div class="flex items-center">
                     <div class="ml-4 text-lg leading-7 font-semibold"><a class="underline text-gray-900 dark:text-white">Masukan Barang</a></div>
                     <div class="ml-12">
-                        <form method="POST" action="/store">
+                        <form method="POST" action="{{ route('barang.tambah') }}">
                             @csrf
                             <input type="text" name="nama_barang" placeholder="Masukan nama barang" />
                             <input type="number" name="jumlah_barang" placeholder="Masukan jumlah" />
