@@ -65,7 +65,10 @@ class BarangController extends Controller
      */
     public function edit(Barang $barang)
     {
-        return View::make('barang.edit', ['barang' => $barang]);
+        return View::make('barang.edit', [
+            'barang' => $barang,
+            'title' => 'Halaman Edit Barang'
+        ]);
     }
 
     /**
