@@ -16,7 +16,7 @@ class BarangController extends Controller
     public function index()
     {
         $barangs = Barang::all();
-        return View::make('barang', ['barangs' => $barangs]);
+        return View::make('barang.index', ['barangs' => $barangs]);
     }
 
     /**
