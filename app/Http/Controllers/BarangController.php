@@ -80,7 +80,11 @@ class BarangController extends Controller
      */
     public function update(Request $request, Barang $barang)
     {
-        //
+        $barang->nama_barang = $request->nama_barang;
+        $barang->jumlah_barang = $request->jumlah_barang;
+        $barang->save();
+
+        return Redirect::route('barang.index');
     }
 
     /**
