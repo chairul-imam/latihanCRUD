@@ -18,5 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/barang', [BarangController::class, 'index'])
+    ->name('barang.index');
 Route::post('/store', [BarangController::class, 'store']);
