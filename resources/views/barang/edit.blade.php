@@ -9,7 +9,7 @@
 <body>
     <h3>Edit Barang</h3>
     
-    <form action="/barang/update/{{ $barang->id }}" method="post">
+    <form action="{{ route('barang.update', ['barang' => $barang]) }}" method="post">
         @csrf
         <label for="nama">Nama Barang</label>
         <br>
