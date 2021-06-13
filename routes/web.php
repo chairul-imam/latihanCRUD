@@ -30,8 +30,8 @@ Route::post('/barang/simpan', [BarangController::class, 'store'])
 Route::get('/barang/edit/{barang}', [BarangController::class, 'edit'])
     ->name('barang.edit');
 
-Route::post('barang/update/{barang}', [BarangController::class, 'update'])
+Route::post('/barang/update/{barang}', [BarangController::class, 'update'])
     ->name('barang.update');
 
-Route::get('barang/hapus/{barang}', [BarangController::class, 'destroy'])
+Route::get('/barang/hapus/{barang}', [BarangController::class, 'destroy'])
     ->name('barang.hapus');
