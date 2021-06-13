@@ -22,6 +22,8 @@ Route::get('/barang', [BarangController::class, 'index'])
     ->name('barang.index');
 Route::get('/barang/tambah', [BarangController::class, 'create'])
     ->name('barang.tambah');
+Route::post('/barang/simpan', [BarangController::class, 'store'])
+    ->name('barang.simpan');
 Route::get('/barang/edit/{barang}', [BarangController::class, 'edit']);
 Route::post('barang/update/{barang}', [BarangController::class, 'update']);
 Route::get('barang/hapus/{barang}', [BarangController::class, 'destroy']);
