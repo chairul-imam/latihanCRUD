@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/barang', [BarangController::class, 'index'])
     ->name('barang.index');
-Route::post('/barang/tambah', [BarangController::class, 'store'])
+Route::get('/barang/tambah', [BarangController::class, 'create'])
     ->name('barang.tambah');
 Route::get('/barang/edit/{barang}', [BarangController::class, 'edit']);
 Route::post('barang/update/{barang}', [BarangController::class, 'update']);
