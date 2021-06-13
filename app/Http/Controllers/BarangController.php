@@ -30,7 +30,9 @@ class BarangController extends Controller
      */
     public function create()
     {
-        //
+        return View::make('barang.tambah', [
+            'title' => 'Halaman Tambah Barang'
+        ]);
     }
 
     /**
