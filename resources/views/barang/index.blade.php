@@ -29,11 +29,11 @@
                 <td>{{ $barang->nama_barang }}</td>
                 <td>{{ $barang->jumlah_barang }}</td>
                 <td> 
-                    <a data-id_edit="{{ $barang->id }}" href="/barang/edit/{{ $barang->id }}"> 
+                    <a href="{{ route('barang.edit', ['barang' => $barang]) }}"> 
                         edit
                     <a>
                     |
-                    <a data-id_hapus="{{ $barang->id }}" href="/barang/hapus/{{ $barang->id }}">
+                    <a href="{{ route('barang.hapus', ['barang' => $barang]) }}">
                         hapus
                     <a>
                 </td>
